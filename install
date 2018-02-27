@@ -1,3 +1,6 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}")" && pwd )";
+sudo rm /usr/local/bin/sv
 sudo ln -s $DIR/sv /usr/local/bin/sv
+sudo rm /usr/local/bin/ssh.config
+sudo ln -s $DIR/ssh.config /usr/local/bin/ssh.config

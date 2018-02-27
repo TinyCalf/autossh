@@ -8,6 +8,7 @@ echo -e "\
 /_/   \_\___/  |_| \___/|____/____/|_| |_| \n\
 v1.0 tiny-calf.com\n"
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}")" && pwd )"
 
 while read -r -a line
 do
@@ -19,6 +20,6 @@ do
 			port=${line[4]};
 			des=${line[5]};
     fi
-done < ./ssh.config
+done < $DIR/ssh.config
 
 /usr/bin/expect -f ./sv_exp $user $host $pass $port $des
