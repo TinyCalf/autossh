@@ -4,3 +4,5 @@ sudo rm /usr/local/bin/sv
 sudo ln -s $DIR/sv /usr/local/bin/sv
 sudo rm /usr/local/bin/ssh.config
 sudo ln -s $DIR/ssh.config /usr/local/bin/ssh.config
+sudo rm /usr/local/bin/sv_exp
+sudo ln -s $DIR/sv_exp /usr/local/bin/sv_exp

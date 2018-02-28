@@ -1,4 +1,3 @@
-#!/usr/bin/expect -f
 set user [lindex $argv 0]
 set host [lindex $argv 1]
 set pass [lindex $argv 2]

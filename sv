@@ -12,14 +12,14 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}")" && pwd )"
 
 while read -r -a line
 do
-		if [[ ${line[0]} = $1 ]]
-		then
-			user=${line[1]};
-			host=${line[2]};
-			pass=${line[3]};
-			port=${line[4]};
-			des=${line[5]};
+    if [[ ${line[0]} = $1 ]]
+        then
+	    user=${line[1]};
+	    host=${line[2]};
+	    pass=${line[3]};
+	    port=${line[4]};
+            des=${line[5]};
     fi
 done < $DIR/ssh.config
 
-/usr/bin/expect -f ./sv_exp $user $host $pass $port $des
+/usr/bin/expect -f $DIR/sv_exp $user $host $pass $port $des
